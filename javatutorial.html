@@ -7,29 +7,128 @@
 </head>
 <body>
   <script>
-  
-// function greet(name) {
-//   console.log("Hello " + name);
-// }
+    // Assignment 4
 
-// greet('John');
+// SECTION A: JavaScript Array Methods
 
-// function with parameters
+// 1. What is the purpose of the `push()` and `pop()` methods in JavaScript arrays?
+// The `push()` method adds one or more elements to the end of an array.
+// The `pop()` method removes the last element from an array.
 
-// function add(a,b) {
-//   return a + b;
+let fruits = ["apple", "banana"];
+fruits.push("orange"); // Adds "orange" to the array
+console.log(fruits); // Output: ["apple", "banana", "orange"]
 
-// }
-// console.log(add(1, 2)); 
+fruits.pop(); // Removes the last element "orange"
+console.log(fruits); // Output: ["apple", "banana"]
 
-// setTimeout(() => {
-// console.log("Hello world")
-// }, 5000);
+// 2. Use the `filter()` method to extract all even numbers from an array of numbers between 1 and 20.
 
-function square(num) {
-  return num * num;
+let numbers = [];
+for (let i = 1; i <= 20; i++) {
+  numbers.push(i);
 }
-console.log(square(4));
+
+let evenNumbers = numbers.filter(function(num) {
+  return num % 2 === 0;
+});
+
+console.log(evenNumbers); // Output: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+// 3. Describe how the `find()` method works and give a practical example.
+// The `find()` method returns the first element in an array that satisfies a condition.
+
+let students = [
+  { name: "Seun", score: 70 },
+  { name: "Hannah", score: 85 },
+  { name: "Caleb", score: 40 }
+];
+
+let topStudent = students.find(student => student.score > 80);
+console.log(topStudent); // Output: { name: "Hannah", score: 85 }
+
+// SECTION B: JavaScript Conditions
+
+// 1. Explain the difference between `if`, `else if`, and `else` with an example.
+// `if` checks the first condition, `else if` checks another condition if the first is false, and `else` runs if none are true.
+
+let score = 75;
+if (score > 80) {
+  console.log("Excellent");
+} else if (score >= 50) {
+  console.log("Pass"); // Output: Pass
+} else {
+  console.log("Fail");
+}
+
+// 2. Program to check if a number is positive, negative, or zero.
+let num = -3;
+if (num > 0) {
+  console.log("Positive");
+} else if (num < 0) {
+  console.log("Negative"); // Output: Negative
+} else {
+  console.log("Zero");
+}
+
+// 3. What is a switch statement? Give an example that checks for different days of the week.
+// A switch statement checks one value against multiple cases.
+
+let day = "Friday";
+switch(day) {
+  case "Monday":
+    console.log("Start of the week");
+    break;
+  case "Friday":
+    console.log("Weekend starts"); // Output: Weekend starts
+    break;
+  case "Sunday":
+    console.log("Rest day");
+    break;
+  default:
+    console.log("Midweek day");
+}
+
+// 4. Comparison operators explained with examples.
+let a = 5, b = "5";
+console.log(a == b);   // true, value is same
+console.log(a === b);  // false, type is different
+console.log(a != b);   // false
+console.log(a !== b);  // true
+console.log(a > 3);    // true
+console.log(a < 10);   // true
+
+// 5. Program to check if student passed or failed.
+let examScore = 48;
+if (examScore >= 50) {
+  console.log("Passed");
+} else {
+  console.log("Failed"); // Output: Failed
+}
+
+// SECTION C: JavaScript Functions
+
+// 1. What is a function in JavaScript? How do you define one?
+// A function is a reusable block of code that performs a specific task.
+
+function sayHello() {
+  console.log("Hello!");
+}
+sayHello(); // Output: Hello!
+
+// 2. Function named `greetUser` that takes a name as a parameter and logs a greeting.
+function greetUser(name) {
+  console.log("Hello, " + name + "!");
+}
+greetUser("Amina"); // Output: Hello, Amina!
+
+// 3. Function that takes two numbers and returns their product.
+function multiply(a, b) {
+  return a * b;
+}
+console.log(multiply(4, 5)); // Output: 20
+
+
 
 //   </script>
   
